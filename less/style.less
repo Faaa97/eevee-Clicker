@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto|Anton|Permanent+Marker|Pacifico|Patrick+Hand);
+
+html,body{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: url('https://i.stack.imgur.com/jGlzr.png') repeat;
+}
+#clicker{
+  width: 25%;
+  //background: rgba(0, 0, 255, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+#count{
+  //height: 25%;
+  height: 80px;
+  width: 100%;
+  /*min-height: 80px;
+  max-height: 200px;*/
+  background: rgba(0, 0, 139, 0.4);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 200%;
+}
+
+#clickZone{
+  height: 180px;
+  //min-height: 180px;
+  width: 40%;
+  min-width: 180px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  
+  
+}
+
+#info {
+  width: 50%;
+  //background: red;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  //filter: grayscale(60%);
+}
+
+#titulo{
+  width: 100%;
+  text-transform: uppercase;
+  text-align:center;
+  margin-top: 2%;
+  font-size: 200%;
+  max-height: 100px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#stats{
+  margin-top: 5%;
+  margin-left: 1%;
+  font-family: 'Patrick Hand', cursive;
+}
+
+#update{
+  margin-top: 5%;
+  margin-right: 1%;
+  font-family: 'Patrick Hand', cursive;
+}
+
+#reset{
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  margin-right: 1%;
+  width: 100%;
+}
+
+#reset > button{
+  border: none;
+  background-color: #2387c0;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 250%;
+}
+
+#toolbar{
+  width: 25%;
+  //background: rgba(0, 128, 0, 0.4);
+}
+
+#upgrades{
+  height: 25%;
+  min-height: 80px;  
+  border: 1px solid black;
+  overflow-y: scroll;
+  text-align: center;
+  line-height: 150%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#upgrades > .background{
+  position: absolute;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: rgba(0,0,0, 0.4);
+  font-size: 200%;
+  font-family: 'Pacifico', cursive;
+  top: 0;
+  left: 25%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.upgrade{
+  height: 78px;
+  width: 80px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+}
+
+.upgrade > img{
+  image-rendering:pixelated;
+  transform: scale(2.5,2.5);
+  
+}
+
+#items{
+  overflow-y: scroll;
+  height: 74%;
+  border: 1px solid black;
+}
+
+.item{
+  min-height: 72px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: white;
+  margin-top: 0.3%;
+  display: flex;
+  filter: grayscale(100%);
+  border-radius: 6px;
+  box-shadow: 0.5px 0.5px 25px black inset;
+  background: #a8a878;
+}
+
+.foto{
+  image-rendering:pixelated;
+  height:15%;
+  width:15%;
+  transform: scale(0.5,0.5);
+}
+
+.available{
+  filter: grayscale(0%);
+}
+.delete{
+  display:none;
+}
+
+.Eevee{
+  background: #a8a878;
+}
+.Vaporeon{
+  background: #6890f0;
+}
+.Espeon{
+  background: #f85888;
+}
+.Jolteon{
+  background: #f8d030;
+}
+.Flareon{
+  background: #f08030;
+}
+.Umbreon{
+  background: #705848;
+}
+.Leafeon{
+  background: #78c850;
+}
+.Glaceon{
+  background: #98d8d8;
+}
+
+@keyframes cookieAlertMov{
+  0%{top: 120%;}
+  100%{top: 85%;}
+}
+
+@keyframes cookieAlertMov-r{
+  0%{top: 85%;}
+  100%{top: 120%;}
+}
+
+#cookieAlert{
+  position: fixed;
+  top: 120%;
+  left: 40%;
+  background: black;
+  color: white;
+  padding: 1%;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  text-align: center;
+}
+#cookieAlert button{
+  margin-top: 2%;
+  max-width: 25%;
+  cursor: pointer;
+  border: none;
+  background-color: #2387c0;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 250%;
+  //padding-right: 25%;
+}
+
+#cookieAlert.notaccepted{
+  animation: cookieAlertMov 1s ease-out 1 forwards;
+}
+
+#cookieAlert.hide{
+  animation: cookieAlertMov-r 1s ease-out forwards;  //No funciona reverse bien?
+}
+
